@@ -47,9 +47,13 @@
                         <a href="?option=addlikeproduct&id=<?= $r['id'] ?>">
                           <i class="ti-heart"></i>
                         </a>
-                        <a href="#">
+                        <a href="?option=cart&action=add&id=<?= $r['id']?>">
+                         
                           <i class="ti-shopping-cart"></i>
                         </a>
+
+                       
+
                       </div>
                     </div>
                     <div class="product-btm">

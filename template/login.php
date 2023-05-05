@@ -29,7 +29,7 @@
                 class="row contact_form"
                 action="#"
                 method="post"
-                novalidate="novalidate"
+                
               >
           
                 <div class="col-md-12 form-group">
@@ -52,11 +52,19 @@
                   />
                 </div>
                 
-                <div class="col-md-12 form-group">
+                <div class="col-md-5 form-group">
+                  
                   <button type="submit" value="submit" class="btn submit_btn" name="click">
                     Send Message
                   </button>
                   
+                </div>
+                <div class="col-md-7 form-group">
+                  
+                  <div class="float-right">
+                    Bạn chưa có tài khoản ?<a href="?option=register" style="color:red"> Đăng ký</a>
+                  </div>
+                 
                 </div>
                 
               </form>

@@ -17,8 +17,16 @@
                 include"add_like_product.php";
                 break;
             case'listlikeproduct':
-                include"like.php";
+                include"listlike.php";
                 break;
+            case'register':
+                include"register.php";
+                break;
+            case'cart':
+                include"cart.php";
+                break;
+          
+
         }
     }
     else{

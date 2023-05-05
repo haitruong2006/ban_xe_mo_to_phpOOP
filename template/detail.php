@@ -32,57 +32,53 @@
                 </div>
             </div>
             </div>
+            
             <div class="col-lg-5 offset-lg-1">
-            <div class="s_product_text">
-                <h3><?= $r['name']?></h3>
-                <h2><?= number_format($r['price'])?><sup>đ</sup></h2>
-                <ul class="list">
-                <li>
-                    <a href="#"> <span>Hãng Xe</span> : <?= $r['name_category']?></a>
-                </li>
-                <li>
-                    <a href="#"> <span>Tình Trạng</span> : <?= $r['quantity']-$r['sell_number']==0?'Hết hàng':'Còn hàng'?></a>
-                </li>
-                </ul>
-                <p>
-                <?= $r['characteristic'] ?>
-                </p>
-                <div class="product_count">
-                <label for="qty">Số lượng:</label>
-                <input
-                    type="text"
-                    name="qty"
-                    id="sst"
-                    maxlength="12"
-                    value="1"
-                    title="Quantity:"
-                    class="input-text qty"
-                />
-                <button
-                    onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                    class="increase items-count"
-                    type="button"
-                >
-                    <i class="lnr lnr-chevron-up"></i>
-                </button>
-                <button
-                    onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                    class="reduced items-count"
-                    type="button"
-                >
-                    <i class="lnr lnr-chevron-down"></i>
-                </button>
-                </div>
-                <div class="card_area">
-                <a class="main_btn" href="#">Add to Cart</a>
-                <a class="icon_btn" href="#">
-                    <i class="lnr lnr lnr-diamond"></i>
-                </a>
-                <a class="icon_btn" href="#">
-                    <i class="lnr lnr lnr-heart"></i>
-                </a>
-                </div>
-            </div>
+                <form action="#" method="post">
+                    <?php
+                        if(isset($_POST['qty'])){
+                            $qty = $_POST['qty'];
+                        }
+                    ?>
+                    <div class="s_product_text">
+                        <h3><?= $r['name']?></h3>
+                        <h2><?= number_format($r['price'])?><sup>đ</sup></h2>
+                        <ul class="list">
+                        <li>
+                            <a href="#"> <span>Hãng Xe</span> : <?= $r['name_category']?></a>
+                        </li>
+                        <li>
+                            <a href="#"> <span>Tình Trạng</span> : <?= $r['quantity']-$r['sell_number']==0?'Hết hàng':'Còn hàng'?></a>
+                        </li>
+                        </ul>
+                        <p>
+                        <?= $r['characteristic'] ?>
+                        </p>
+                        <div class="product_count">
+                        <label for="qty">Số lượng:</label>
+                            <input
+                                type="number"
+                                min="1"
+                                name="qty"
+                                value="1"
+                                id="sst"
+                                maxlength="12"
+                                title="Quantity:"
+                                class="input-text qty"
+                            />
+                        
+                        </div>
+                        <div class="card_area">
+                        <a class="main_btn" href="?option=addcard&id=<?= $r['id']?>&qty=1>">Add to Cart</a>
+                        <a class="icon_btn" href="#">
+                            <i class="lnr lnr lnr-diamond"></i>
+                        </a>
+                        <a class="icon_btn" href="#">
+                            <i class="lnr lnr lnr-heart"></i>
+                        </a>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

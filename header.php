@@ -104,48 +104,43 @@
                   <?php
                     if(isset($_SESSION['email'])){
                   ?>
-                   <li class="nav-item">
-                    <a href="?option=information" class="icons">
-                    <i class="ti-user"></i>
-                    </a>
-                  </li>
-                <?php
+                    <li class="nav-item">
+                      <a href="?option=information" class="icons">
+                      <i class="ti-user"></i>
+                      </a>
+                    </li>
+                  <?php
                     }
                     else{
                  ?>
-                  <li class="nav-item">
-                    <a href="?option=login" class="icons">
-                      <i class="ti-user" aria-hidden="true"></i>
-                    </a>
-                  </li>
+                    <li class="nav-item">
+                      <a href="?option=login" class="icons">
+                        <i class="ti-user" aria-hidden="true"></i>
+                      </a>
+                    </li>
                   <?php
                     }
                   ?>
                  
 
-                  <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-shopping-cart"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="?option=listlikeproduct" class="icons">
-                      <i class="ti-heart" aria-hidden="true"></i>
-                    </a>
-                  </li>
+                    <li class="nav-item">
+                      <a href="?option=card" class="icons">
+                        <i class="ti-shopping-cart"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="?option=listlikeproduct" class="icons">
+                        <i class="ti-heart" aria-hidden="true"></i>
+                      </a>
+                    </li>
                  <?php
                     if(isset($_SESSION['email'])){
                   ?>
-                   <li class="nav-item">
-                    <a href="?option=logout" class="icons">
-                    <i class="fas fa-sign-out-alt"></i>
-                    </a>
-                  </li>
-                <?php
-                    }
-                    else{
-                 ?>
-                 
+                    <li class="nav-item">
+                      <a href="?option=logout" class="icons">
+                      <i class="fas fa-sign-out-alt"></i>
+                      </a>
+                    </li>
                   <?php
                     }
                   ?>
